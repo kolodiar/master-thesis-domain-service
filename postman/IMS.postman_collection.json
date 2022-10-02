@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "c0d7db10-232c-4cdd-80b7-3c16ed8eaa13",
+		"name": "IMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20121980"
+	},
+	"item": [
+		{
+			"name": "search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"search\": \"Address\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ims-host}}/api/v1/users/search",
+					"host": [
+						"{{ims-host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ims-host}}/api/v1/users/65c44bcf-cbb2-49a5-be5e-7b8c5cce9950",
+					"host": [
+						"{{ims-host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"65c44bcf-cbb2-49a5-be5e-7b8c5cce9950"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ims-host}}/api/v1/users/6d42939f-ce78-422f-ae5c-936c1f902415",
+					"host": [
+						"{{ims-host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"6d42939f-ce78-422f-ae5c-936c1f902415"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": null,\n    \"name\": \"Name\",\n    \"surname\": \"Surname\",\n    \"email\": \"Email\",\n    \"address\": \"Address\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ims-host}}/api/v1/users",
+					"host": [
+						"{{ims-host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"newAddress\": \"AddressNew2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ims-host}}/api/v1/users/6d42939f-ce78-422f-ae5c-936c1f902415",
+					"host": [
+						"{{ims-host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"6d42939f-ce78-422f-ae5c-936c1f902415"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
